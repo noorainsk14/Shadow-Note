@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-email/components": "^0.5.2",
     "mongoose": "^8.18.0",
     "next": "15.5.2",
     "react": "19.1.0",
