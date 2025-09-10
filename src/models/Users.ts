@@ -56,6 +56,11 @@ export const UserSchema  = new mongoose.Schema({
      required : [true, "Verify Code is required"],
   },
 
+   verifyCodeExpiry: {
+    type: Date,
+    required: [true, 'Verify Code Expiry is required'],
+  },
+
   isVerified : {
     type : Boolean,
     default : false
