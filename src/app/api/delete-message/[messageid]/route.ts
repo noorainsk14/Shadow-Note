@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth";
 import { User } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import mongoose from 'mongoose';
+import { NextResponse } from "next/server";
 
 
 
@@ -18,7 +19,7 @@ export async function DELETE(
   const _user: User = session?.user as User;
 
   if (!session || !_user) {
-    return Response.json(
+    return NextResponse.json(
       {
         success: false,
         message: "Not authenticated",
@@ -36,19 +37,19 @@ export async function DELETE(
     );
 
     if (updatedResult.modifiedCount === 0) {
-      return Response.json(
+      return NextResponse.json(
         { mesage: "Message not found or already deleted", success: false },
         { status: 404 }
       );
     }
 
-    return Response.json(
+    return NextResponse.json(
       { message: "Message deleted", success: true },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error deleting message", error);
-    return Response.json(
+    return NextResponse.json(
       {
         message: "Error in deleting Message",
         success: false,
