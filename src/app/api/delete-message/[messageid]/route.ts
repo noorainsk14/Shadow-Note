@@ -11,9 +11,9 @@ import { NextRequest } from "next/server";
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { messageid: string } }
+  context: { params: { messageid: string } }
 ) {
-  const messageId = params.messageid;
+  const messageId = context.params.messageid;;
   await dbConnect();
 
   const session = await getServerSession(authOptions);
