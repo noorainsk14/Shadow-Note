@@ -25,6 +25,13 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { messageSchema } from "@/schemas/messageSchema";
 
+const defaultQuestions = [
+  "What's something you're proud of?",
+  "Tell me a fun fact about yourself!",
+  "What motivates you every day?",
+
+];
+
 export default function SendMessage() {
   const params = useParams<{ username: string }>();
   const username = params.username;
@@ -171,16 +178,18 @@ export default function SendMessage() {
           <CardContent className="flex flex-col space-y-2">
             {error && <p className="text-red-500">{error.message}</p>}
 
-            {questions.map((question, index) => (
-              <Button
-                key={index}
-                variant="outline"
-                className="mb-2 text-left justify-start"
-                onClick={() => handleMessageClick(question)}
-              >
-                {question}
-              </Button>
-            ))}
+            {(questions.length > 0 ? questions : defaultQuestions).map(
+              (question, index) => (
+                <Button
+                  key={index}
+                  variant="outline"
+                  className="mb-2 text-left justify-start"
+                  onClick={() => handleMessageClick(question)}
+                >
+                  {question}
+                </Button>
+              )
+            )}
           </CardContent>
         </Card>
       </div>
@@ -195,7 +204,3 @@ export default function SendMessage() {
     </div>
   );
 }
-
-
-
-
