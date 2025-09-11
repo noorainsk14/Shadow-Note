@@ -1,11 +1,13 @@
-import mongoose, { Schema, Document} from "mongoose";
+import mongoose, { Schema, Document, Types } from "mongoose";
 
 export  interface Message extends Document {
+   _id: Types.ObjectId | string,
   content : string,
   createdAt : Date
 }
 
 const MessageSchema : Schema<Message> = new mongoose.Schema({
+ 
   content : {
     type : String,
     required : true
