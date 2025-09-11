@@ -11,7 +11,7 @@ import { NextRequest } from "next/server";
 
 export async function DELETE(
   request: NextRequest,
-  context: { params: { messageid: string } }
+  context: any 
 ) {
   const messageId = context.params.messageid;;
   await dbConnect();
