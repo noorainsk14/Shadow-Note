@@ -14,9 +14,17 @@ export async function sendVerificationEmail(
       subject: 'Mystery Message Verification Code',
       react: VerificationEmail({ username, otp: verifyCode }),
     });
-    return { success: true, message: 'Verification email sent successfully.' };
+    return {
+  success: true,
+  message: 'Verification email sent successfully.',
+  isAcceptingMessages: true 
+     };
   } catch (emailError) {
     console.error('Error sending verification email:', emailError);
-    return { success: false, message: 'Failed to send verification email.' };
-  }
+    return {
+  success: false,
+  message: 'Failed to send verification email.',
+  isAcceptingMessages: false
+};
+}
 }
