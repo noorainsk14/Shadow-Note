@@ -9,8 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^2.0.27",
-    "@ai-sdk/react": "^2.0.37",
+    "@ai-sdk/openai": "^2.0.28",
+    "@ai-sdk/react": "^2.0.40",
     "@google/genai": "^1.17.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
@@ -20,7 +20,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.6",
     "@react-email/components": "^0.5.2",
-    "ai": "^5.0.39",
+    "ai": "^5.0.40",
     "axios": "^1.11.0",
     "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
@@ -42,7 +42,7 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "usehooks-ts": "^3.1.1",
-    "zod": "^4.1.5"
+    "zod": "^4.1.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

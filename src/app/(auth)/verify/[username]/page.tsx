@@ -56,7 +56,13 @@ export default function Verification(){
       )
     }
 
+    
+
   }
+
+  const verifyLater = () => {
+     router.replace('/dashboard')
+    }
 
   return(
      <div className="flex justify-center items-center min-h-screen bg-gray-100">
@@ -78,7 +84,16 @@ export default function Verification(){
               </FormItem>
               )}
             />
-            <Button type="submit">Verify</Button>
+           <div className="flex flex-col gap-4">
+              <Button type="submit">Verify</Button>
+              <Button
+                type="button"
+                onClick={verifyLater}
+              >
+                Verify Later
+              </Button>
+            </div>
+           
           </form>
         </Form>
       </div>
