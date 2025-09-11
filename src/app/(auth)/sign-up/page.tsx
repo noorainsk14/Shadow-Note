@@ -47,7 +47,6 @@ export default function SignUpForm() {
           const response = await axios.get<ApiResponse>(
             `/api/check-username-unique?username=${username}`
           );
-          console.log(response);
           setUsernameMessage(response.data.message);
         } catch (error) {
           const axiosError = error as AxiosError<ApiResponse>;
@@ -70,7 +69,7 @@ export default function SignUpForm() {
       toast("success", {
         description: response.data.message,
         action: {
-          label: "Undo",
+          label: "Ok",
           onClick: () => console.log("Undo"),
         },
       });
@@ -104,7 +103,7 @@ export default function SignUpForm() {
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
-            Join True Feedback
+            Join Nudgify
           </h1>
           <p className="mb-4">Sign up to start your anonymous adventure</p>
         </div>

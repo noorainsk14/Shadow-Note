@@ -14,7 +14,7 @@
     "content": "Do you have any book recommendations?",
     "received": "1 day ago"
   },
-  [
+  
   {
     "title": "Message from BookLover42",
     "content": "Just finished the novel you recommended. Amazing!",
@@ -40,6 +40,4 @@
     "content": "Check out this new app I built!",
     "received": "30 minutes ago"
   }
-]
-
 ]
